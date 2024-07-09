@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.textoHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.textoHeader .titulo1 {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+.textoHeader .titulo2 {
+    font-size: 1.9rem;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+.parrafo {
+    max-width: 500px;
+    margin-top: 40px;
+}
+.parrafo p {
+    font-size: 1rem;
+    font-weight: bolder;
+    color: rgb(148, 148, 148);
+}
+
+.contenedorGrilla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+}
+
+#grilla {
+    display: grid;
+    grid-template-areas: 
+        ". builder ."
+        ". builder ."
+        "supGreen builder supBlue"
+        "supGreen . supBlue"
+        "supGreen karma supBlue"
+        ". karma ."
+        ". karma .";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 70px);
+    column-gap: 60px;
+    row-gap: -10px;
+    width: 100%;
+    max-width: 1200px; 
+}
+
+.card {
+    border-radius: 10px;
+}
+.supervisorGreen {
+    grid-area: supGreen;
+    border-top: 5px solid hsl(180, 62%, 55%);
+}
+
+.teamBuilder {
+    grid-area: builder;
+    border-top: 5px solid hsl(0, 78%, 62%);
+}
+
+.supervisorBlue {
+    grid-area: supBlue;
+    border-top: 5px solid hsl(212, 86%, 64%);
+
+}
+
+.karma {
+    grid-area: karma;
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 10px 5px rgb(161, 161, 161);
+}
+.contenedor p {
+    margin-top: 10px;
+}
+
+
+.colorGreen { background-color: green; }
+.colorRojo { background-color: red; }
+.colorBlue { background-color: blue; }
+.colorAmarillo { background-color: yellow; } 
+
+#grilla .contenedor img {
+    width: 50px;
+    align-self: flex-end;
+    margin-top: 40px;
+}
